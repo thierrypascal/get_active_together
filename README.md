@@ -30,7 +30,9 @@ Possible Extensions:
 
 ## Project confirmation
 
-<confirmation by lecturer>
+I love the idea.
+
+confirmed.
 
 ## Project delivery <to be filled by student>
 
