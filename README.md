@@ -6,23 +6,23 @@ Matriculation Number: 19-487-388
 
 Project idea short description:
 
-Title: GetActiveTogether
+#####Title: GetActiveTogether
 
 The idea is to create an app which encourages people to get outside and do sports.
 The app contains a List of predefined locations, where people can sign in to meet up to do sports together.
-Each location contains diffrent timeslots, for example people can meet up at 12 am or at 8 pm, with all signed users at theses times shown.
-The app should feature diffrent activities like jogging, walking, cycling, mountain bike. The locations are activity specific.
+Each location contains different timeslots, for example people can meet up at 12 am or at 8 pm, with all signed users at these times shown.
+The app should feature different activities like jogging, walking, cycling, mountain bike. The locations are activity specific.
 
-Possible Workflow:
+#####Possible Workflow:
 - CRUD locations, timeslots and users
 - Assign users to timeslots
 - Show locations sorted to amount of participants
 
-Constraints:
+#####Constraints:
 - The selectable timeslots (dates) are limited to 2 weeks
 - The predefined locations are only in and around my hometown, Oberwil (BL)
 
-Possible Extensions:
+#####Possible Extensions:
 - Security setup that only certain authorities can create, delete locations and timeslots
 - Introducing time such that timeslots (dates) are per calendar week
 - Showing locations on a map
