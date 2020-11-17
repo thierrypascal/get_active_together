@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>
+        MeetUps
+    </title>
+    <script>
+        function getMeetUps() {
+            const url = "/meetups.json";
+            fetch(url)
+                .then( resp => resp.json() )
+                .then( meetups => {
+                    console.log(meetups);
+                    const target = document.getElementById("target");
+                    meetups.forEach( meetup => {
+                        target.innerHTML += "<div>"+"Meetup Nr: " + meetup.id + "</div>";
+                    })
+                })
+                .catch( err => console.log(err));
+        }
+    </script>
+</head>
+<body>
+<h1>
+    All my MeetUps
+</h1>
+
+<div id="target">
+</div>
+
+<script>
+    getMeetUps();
+</script>
+
+</body>
+</html>

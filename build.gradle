@@ -93,7 +93,10 @@ tasks.withType(GroovyCompile) {
 }
 
 webdriverBinaries {
-    chromedriver '2.45.0'
+    chromedriver {
+        version = '85.0.4183.87'
+        architecture = 'X86'
+    }
     geckodriver '0.24.0'
 }
 
