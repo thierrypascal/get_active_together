@@ -19,7 +19,10 @@ class BootStrap {
         Timeslot t5 = new Timeslot(date: today, timeslot: Timeslot.PM3).save()
 
         Meetup m1 = new Meetup(location: l1, timeslot: t3, person: p1).save()
-        Meetup m2 = new Meetup(location: l3, timeslot: t5, person: p2).save()
+        Meetup m2 = new Meetup(location: l3, timeslot: t5, person: p1).save()
+        Meetup m3 = new Meetup(location: l3, timeslot: t5, person: p2).save()
+        Meetup m4 = new Meetup(location: l2, timeslot: t1, person: p2).save()
+        Meetup m5 = new Meetup(location: l1, timeslot: t2, person: p1).save()
 
     }
     def destroy = {
