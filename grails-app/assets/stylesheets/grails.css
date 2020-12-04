@@ -35,7 +35,7 @@ pre {
     margin: 10px;
 }
 .navbar-dark a {
-    color: #ffffff !important;
+    color: darkgrey !important;
     font-size: 18px !important;
     text-decoration: none;
 }
@@ -44,12 +44,13 @@ pre {
 
 }
 .navbar-dark, .navbar-static-top {
-    background-color: #424649;
+    background-color: whitesmoke;
     border: 0px;
 }
 a.navbar-brand {
-    color: white !important;
-    font-size: 19px !important;
+    color: darksalmon !important;
+    font-size: 24px !important;
+    margin: 0.5rem;
 }
 .navbar-dark .navbar-nav>.active>a, .navbar-dark .navbar-nav>.active>a:hover, .navbar-dark .navbar-nav>.active>a:focus {
     background-color: transparent;
@@ -59,7 +60,7 @@ a.navbar-brand {
     color: white !important;
 }
 .navbar-nav>li>a:hover {
-    background-color: #2559a7 !important;
+    background-color: darksalmon !important;
     color: white !important;
 }
 .navbar-nav>li>a {
@@ -69,7 +70,7 @@ a.navbar-brand {
     background-color: white;
 }
 .navbar-dark .navbar-toggle:hover, .navbar-dark .navbar-toggle:focus {
-    background-color: #2559a7;
+    background-color: darksalmon;
 }
 
 .navbar-toggler {
@@ -526,7 +527,8 @@ h8 {
     position: relative;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 5%
+    padding: 0 5%;
+    padding-bottom: 4rem;
 }
 
 .row:before, .row:after {

@@ -1,8 +1,5 @@
 package webec
 
-import grails.rest.Resource
-
-//@Resource(uri="/meetups")
 class Meetup {
 
     Location location
