@@ -12,4 +12,5 @@ class MeetupController {
 
         render result
     }
+
 }
