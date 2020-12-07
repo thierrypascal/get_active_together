@@ -3,7 +3,6 @@ package webec
 
 class Location {
     String title
-    String description
     String coordinates
     String activity
 
@@ -19,7 +18,6 @@ class Location {
 
     static constraints = {
         title nullable: false
-        description nullable: true
         coordinates nullable: false
         activity nullable: false, inList: ACTIVITY
     }

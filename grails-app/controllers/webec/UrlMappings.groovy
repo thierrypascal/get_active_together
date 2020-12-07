@@ -9,7 +9,7 @@ class UrlMappings {
             }
         }
 
-        "/"(controller: 'meetup')
+        "/"(controller: 'location')
         "500"(view:'/error')
         "404"(view:'/notFound')
     }
