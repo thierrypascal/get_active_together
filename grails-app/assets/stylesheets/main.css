@@ -55,6 +55,10 @@ ul {
     padding: 0;
 }
 
+ul.admin {
+    list-style-type: none;
+}
+
 img {
     border: 0;
 }
@@ -178,6 +182,7 @@ footer a {
 .nav a.meetup {
     background-image: url(../images/skin/database_add.png);
     background-color: #feb672;
+    color: white;
 }
 
 .nav li.dropdown.show ul.dropdown-menu {
@@ -549,7 +554,7 @@ th:hover, tr:hover {
     text-decoration: underline;
 }
 
-.buttons .delete, .buttons .edit, .buttons .save, .buttons .list {
+.buttons .delete, .buttons .edit, .buttons .save, .buttons .list, .buttons .create {
     background-position: 0.7em center;
     background-repeat: no-repeat;
     text-indent: 25px;
@@ -569,6 +574,10 @@ th:hover, tr:hover {
 
 .buttons .list {
     background-image: url(../images/skin/database_table.png);
+}
+
+.buttons .create {
+    background-image: url(../images/skin/database_add.png);
 }
 
 a.skip {

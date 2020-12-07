@@ -16,12 +16,17 @@
 
         <div class="container" id="controllers" role="navigation">
             <h2>Available Controllers:</h2>
-            <ul>
+            <ul class="admin">
                 <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
                     <li class="controller">
                         <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
                     </li>
                 </g:each>
+                <br>
+                <li><g:link class="create" controller="meetup" action="create">create Meetup</g:link></li>
+                <li><g:link class="create" controller="location" action="create">create Location</g:link></li>
+                <li><g:link class="create" controller="timeslot" action="create">create Timeslot</g:link></li>
+                <li><g:link class="create" controller="person" action="create">create Person</g:link></li>
             </ul>
         </div>
     </body>
