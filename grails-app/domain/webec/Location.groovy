@@ -14,7 +14,7 @@ class Location {
 
     public static final List<String> ACTIVITY = [act1, act2, act3, act4, act5]
 
-    String toString() {"$title, Aktivität: $activity, Standort: $coordinates"}
+    String toString() {"$title, $activity, ($coordinates)"}
 
     static constraints = {
         title nullable: false

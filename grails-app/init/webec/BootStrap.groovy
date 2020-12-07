@@ -1,5 +1,7 @@
 package webec
 
+import org.codehaus.groovy.runtime.DateGroovyMethods
+
 class BootStrap {
 
     def init = { servletContext ->
@@ -43,11 +45,22 @@ class BootStrap {
 
 
         Date today = new Date()
+        Date tomorrow = today
+        use(DateGroovyMethods) {
+            today.clearTime()
+            tomorrow = today + 1
+        }
+
         Timeslot t1 = new Timeslot(date: today, timeslot: Timeslot.AM1).save()
         Timeslot t2 = new Timeslot(date: today, timeslot: Timeslot.AM2).save()
         Timeslot t3 = new Timeslot(date: today, timeslot: Timeslot.PM1).save()
         Timeslot t4 = new Timeslot(date: today, timeslot: Timeslot.PM2).save()
         Timeslot t5 = new Timeslot(date: today, timeslot: Timeslot.PM3).save()
+        Timeslot t6 = new Timeslot(date: tomorrow, timeslot: Timeslot.AM1).save()
+        Timeslot t7 = new Timeslot(date: tomorrow, timeslot: Timeslot.AM2).save()
+        Timeslot t8 = new Timeslot(date: tomorrow, timeslot: Timeslot.PM1).save()
+        Timeslot t9 = new Timeslot(date: tomorrow, timeslot: Timeslot.PM2).save()
+        Timeslot t10 = new Timeslot(date: tomorrow, timeslot: Timeslot.PM3).save()
 
         Person p1 = new Person(firstName: "Thierry", lastName: "Odermatt").save()
         Person p2 = new Person(firstName: "Alex", lastName: "Odermatt").save()

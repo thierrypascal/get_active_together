@@ -30,9 +30,17 @@ pre {
 .navbar {
     margin-bottom: 0px;
     padding-right: 110px;
+    background-image: url("../images/header.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
 }
 .navbar .container {
     margin: 10px;
+}
+.intro {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 .navbar-dark a {
     color: darkgrey !important;
