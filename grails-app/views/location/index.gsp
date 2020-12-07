@@ -17,7 +17,7 @@
         <div class="nav" role="navigation">
             <ul>
                 <li><a class="meetup" href="${createLink(uri: '/meetup/create')}">Meetup erstellen</a></li>
-                <li><a class="list" href="${createLink(uri: '/meetup/myMeetups')}">Meine Meetups</a></li>
+                <li><a class="list" href="${createLink(uri: '/person')}">Meine Meetups</a></li>
                 <li><a class="person" href="${createLink(uri: '/person/create')}">Person hinzufügen</a></li>
             </ul>
         </div>

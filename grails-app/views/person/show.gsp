@@ -24,11 +24,9 @@
                 <fieldset class="buttons">
                     <g:link class="edit" action="edit" resource="${this.person}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
                     <input class="delete" type="submit" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+                    <g:link class="list" controller="meetup" action="myMeetups" params="[pre:this.person.getFirstName(), last:this.person.getLastName()]">Meine Meetups</g:link>
                 </fieldset>
             </g:form>
-        </div>
-        <div>
-            <li><a class="list" href="${createLink(uri: '../../meetup/myMeetups')}">Meine Meetups</a></li>
         </div>
     </body>
 </html>
