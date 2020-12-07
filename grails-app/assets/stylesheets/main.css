@@ -85,6 +85,19 @@ img {
     text-indent: -9999px;
 }
 
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 1000px;
+    background-color: #feb672;
+    color: white;
+    text-align: left;
+    padding-left: 1rem;
+}
+footer a {
+    color: darkgrey;
+}
+
 /* NAVIGATION MENU */
 
 .nav {
@@ -207,6 +220,11 @@ label {
     cursor: pointer;
     display: inline-block;
     margin: 0 0.25em 0 0;
+}
+
+.addPersonOnCreateMeetup{
+    margin-top: 1rem;
+    text-align: center;
 }
 
 input, select, textarea {

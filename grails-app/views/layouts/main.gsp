@@ -27,8 +27,13 @@
             <g:pageProperty name="page.nav"/>
         </ul>
     </div>
-
 </nav>
+
+<footer class="page-footer font-small blue pt-4">
+    <div>
+        <a href="../meetup/admin">Admin-Page</a>
+    </div>
+</footer>
 
 <g:layoutBody/>
 

@@ -13,4 +13,12 @@ class MeetupController {
         render result
     }
 
+    def admin(){}
+
+    def myMeetups(){
+        Person person = Person.findByFirstNameAndLastName("Thierry", "Odermatt")
+        List<Meetup> myMeetups = Meetup.findAllByPerson(person)
+
+        [myMeetups:myMeetups]
+    }
 }
