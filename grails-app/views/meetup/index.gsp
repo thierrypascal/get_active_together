@@ -18,7 +18,7 @@
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
     </g:if>
-    <f:table collection="${meetupList}" />
+    <f:table collection="${meetupList}" template="meetup_table" myProperty="Template: view/templates/_fields/_meetup_table.gsp" />
 
     <div class="pagination">
         <g:paginate total="${meetupCount ?: 0}" />
