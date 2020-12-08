@@ -14,11 +14,4 @@ class MeetupController {
     }
 
     def admin(){}
-
-    def myMeetups(){
-        Person person = Person.findByFirstNameAndLastName(params.pre, params.last)
-        List<Meetup> myMeetups = Meetup.findAllByPerson(person)
-
-        [myMeetups:myMeetups]
-    }
 }
