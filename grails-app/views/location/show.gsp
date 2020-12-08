@@ -27,5 +27,16 @@
                 </fieldset>
             </g:form>
         </div>
+        <div id="list-meetup" class="content scaffold-list showMyMeetups" role="main">
+            <h1>Auf dieser Location Meetups erstellt: </h1>
+            <g:if test="${flash.message}">
+                <div class="message" role="status">${flash.message}</div>
+            </g:if>
+            <f:table collection="${showAllPerson}" />
+
+            <div class="pagination">
+                <g:paginate total="${showAllPersonCount ?: 0}" />
+            </div>
+        </div>
     </body>
 </html>
