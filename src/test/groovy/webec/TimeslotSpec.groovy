@@ -5,7 +5,7 @@ import spock.lang.Specification
 
 import java.sql.Time
 
-class TimeslotSpec extends Specification implements DomainUnitTest<Person> {
+class TimeslotSpec extends Specification implements DomainUnitTest<Timeslot> {
 
     void "Timeslot can be created"() {
         given: "a timeslot"
