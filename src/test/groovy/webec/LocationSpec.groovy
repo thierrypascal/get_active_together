@@ -14,3 +14,4 @@ class LocationSpec extends Specification implements DomainUnitTest<Location> {
             l1.activity == "Cycling"
     }
 }
+
