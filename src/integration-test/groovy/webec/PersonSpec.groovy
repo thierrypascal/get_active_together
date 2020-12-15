@@ -6,7 +6,12 @@ import grails.testing.mixin.integration.Integration
 @Integration
 class PersonSpec extends GebSpec {
 
-    void ""() {
-    }
+    void "create person"() {
+        when:
+            go '/person/create'
 
+        then:
+            title == "Person anlegen"
+
+    }
 }

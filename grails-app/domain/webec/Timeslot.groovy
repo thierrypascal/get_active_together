@@ -14,7 +14,13 @@ class Timeslot {
 
     public static final List<String> TIME_SLOTS = [AM1, AM2, PM1, PM2, PM3]
 
-    String toString() {"$timeslot, ${date.year + 1900}-${date.month + 1}-${date.date}"}     //to not show the nulled time
+    String toString() {
+        if (this.date != null){
+            "$timeslot, ${date.year + 1900}-${date.month + 1}-${date.date}"     //to not show the nulled time
+        }else{
+            "$timeslot, $date"
+        }
+    }
 
     static constraints = {
         date nullable: false

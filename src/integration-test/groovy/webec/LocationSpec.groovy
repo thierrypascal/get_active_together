@@ -6,7 +6,14 @@ import grails.testing.mixin.integration.Integration
 @Integration
 class LocationSpec extends GebSpec {
 
-    void ""() {
+    void "create location"() {
+        when:
+        go '/location/create'
+
+        then:
+        title == "Location anlegen"
+
+
     }
 
 }

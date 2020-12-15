@@ -256,6 +256,10 @@ select[multiple] {
     vertical-align: top;
 }
 
+select[name="timeslot.id"] option:nth-child(5n+1) {
+    background-color: lightyellow;
+}
+
 textarea {
     width: 250px;
     height: 150px;
