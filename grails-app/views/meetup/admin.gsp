@@ -23,7 +23,6 @@
                     </li>
                 </g:each>
                 <br>
-                <li><g:link class="create" controller="meetup" action="index">list Meetup</g:link></li>
                 <li><g:link class="create" controller="meetup" action="create">create Meetup</g:link></li>
                 <li><g:link class="create" controller="location" action="create">create Location</g:link></li>
                 <li><g:link class="create" controller="timeslot" action="create">create Timeslot</g:link></li>

@@ -3,7 +3,7 @@ package webec
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class MeetupSpec extends Specification implements DomainUnitTest<Meetup> {
+class MeetupControllerSpec extends Specification implements DomainUnitTest<Meetup> {
 
     void "Meetup can be created"() {
         given: "a location, a timeslot, a person to create a meetup"

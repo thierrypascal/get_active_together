@@ -6,6 +6,7 @@ class BootStrap {
 
     def init = { servletContext ->
 
+        //all locations
         Location l1 = new Location(title: "Grillstelle Güggelchrüz", coordinates: "47.519046, 7.538752", activity: Location.act1).save()
         Location l2 = new Location(title: "Grillstelle Güggelchrüz", coordinates: "47.519046, 7.538752", activity: Location.act2).save()
         Location l3 = new Location(title: "Grillstelle Güggelchrüz", coordinates: "47.519046, 7.538752", activity: Location.act3).save()
@@ -43,27 +44,72 @@ class BootStrap {
         Location l36 = new Location(title: "Gempen Kreuzung", coordinates: "47.472899, 7.658501", activity: Location.act4).save()
         Location l37 = new Location(title: "Gempen Kreuzung", coordinates: "47.472899, 7.658501", activity: Location.act5).save()
 
-
-        Date today = new Date()
-        Date tomorrow = today
+        //calculation for dates for one week in advance
+        //the names of the variables do not match the actual weekday, but it's easier for working
+        Date monday = new Date()
+        Date tuesday = monday
+        Date wednesday = monday
+        Date thursday = monday
+        Date friday = monday
+        Date saturday = monday
+        Date sunday = monday
         use(DateGroovyMethods) {
-            today.clearTime()
-            tomorrow = today + 1
+            monday.clearTime()
+            tuesday = monday + 1
+            wednesday = monday + 2
+            thursday = monday + 3
+            friday = monday + 4
+            saturday = monday + 5
+            sunday = monday + 6
         }
 
-        Timeslot t1 = new Timeslot(date: today, timeslot: Timeslot.AM1).save()
-        Timeslot t2 = new Timeslot(date: today, timeslot: Timeslot.AM2).save()
-        Timeslot t3 = new Timeslot(date: today, timeslot: Timeslot.PM1).save()
-        Timeslot t4 = new Timeslot(date: today, timeslot: Timeslot.PM2).save()
-        Timeslot t5 = new Timeslot(date: today, timeslot: Timeslot.PM3).save()
-        Timeslot t6 = new Timeslot(date: tomorrow, timeslot: Timeslot.AM1).save()
-        Timeslot t7 = new Timeslot(date: tomorrow, timeslot: Timeslot.AM2).save()
-        Timeslot t8 = new Timeslot(date: tomorrow, timeslot: Timeslot.PM1).save()
-        Timeslot t9 = new Timeslot(date: tomorrow, timeslot: Timeslot.PM2).save()
-        Timeslot t10 = new Timeslot(date: tomorrow, timeslot: Timeslot.PM3).save()
+        //do not change the numbers of t, they are linked with css
+        Timeslot t1 = new Timeslot(date: monday, timeslot: Timeslot.AM1).save()
+        Timeslot t2 = new Timeslot(date: monday, timeslot: Timeslot.AM2).save()
+        Timeslot t3 = new Timeslot(date: monday, timeslot: Timeslot.PM1).save()
+        Timeslot t4 = new Timeslot(date: monday, timeslot: Timeslot.PM2).save()
+        Timeslot t5 = new Timeslot(date: monday, timeslot: Timeslot.PM3).save()
 
+        Timeslot t6 = new Timeslot(date: tuesday, timeslot: Timeslot.AM1).save()
+        Timeslot t7 = new Timeslot(date: tuesday, timeslot: Timeslot.AM2).save()
+        Timeslot t8 = new Timeslot(date: tuesday, timeslot: Timeslot.PM1).save()
+        Timeslot t9 = new Timeslot(date: tuesday, timeslot: Timeslot.PM2).save()
+        Timeslot t10 = new Timeslot(date: tuesday, timeslot: Timeslot.PM3).save()
+
+        Timeslot t11 = new Timeslot(date: wednesday, timeslot: Timeslot.AM1).save()
+        Timeslot t12 = new Timeslot(date: wednesday, timeslot: Timeslot.AM2).save()
+        Timeslot t13 = new Timeslot(date: wednesday, timeslot: Timeslot.PM1).save()
+        Timeslot t14 = new Timeslot(date: wednesday, timeslot: Timeslot.PM2).save()
+        Timeslot t15 = new Timeslot(date: wednesday, timeslot: Timeslot.PM3).save()
+
+        Timeslot t16 = new Timeslot(date: thursday, timeslot: Timeslot.AM1).save()
+        Timeslot t17 = new Timeslot(date: thursday, timeslot: Timeslot.AM2).save()
+        Timeslot t18 = new Timeslot(date: thursday, timeslot: Timeslot.PM1).save()
+        Timeslot t19 = new Timeslot(date: thursday, timeslot: Timeslot.PM2).save()
+        Timeslot t20 = new Timeslot(date: thursday, timeslot: Timeslot.PM3).save()
+
+        Timeslot t21 = new Timeslot(date: friday, timeslot: Timeslot.AM1).save()
+        Timeslot t22 = new Timeslot(date: friday, timeslot: Timeslot.AM2).save()
+        Timeslot t23 = new Timeslot(date: friday, timeslot: Timeslot.PM1).save()
+        Timeslot t24 = new Timeslot(date: friday, timeslot: Timeslot.PM2).save()
+        Timeslot t25 = new Timeslot(date: friday, timeslot: Timeslot.PM3).save()
+
+        Timeslot t26 = new Timeslot(date: saturday, timeslot: Timeslot.AM1).save()
+        Timeslot t27 = new Timeslot(date: saturday, timeslot: Timeslot.AM2).save()
+        Timeslot t28 = new Timeslot(date: saturday, timeslot: Timeslot.PM1).save()
+        Timeslot t29 = new Timeslot(date: saturday, timeslot: Timeslot.PM2).save()
+        Timeslot t30 = new Timeslot(date: saturday, timeslot: Timeslot.PM3).save()
+
+        Timeslot t31 = new Timeslot(date: sunday, timeslot: Timeslot.AM1).save()
+        Timeslot t32 = new Timeslot(date: sunday, timeslot: Timeslot.AM2).save()
+        Timeslot t33 = new Timeslot(date: sunday, timeslot: Timeslot.PM1).save()
+        Timeslot t34 = new Timeslot(date: sunday, timeslot: Timeslot.PM2).save()
+        Timeslot t35 = new Timeslot(date: sunday, timeslot: Timeslot.PM3).save()
+
+        //three test persons
         Person p1 = new Person(firstName: "Thierry", lastName: "Odermatt").save()
         Person p2 = new Person(firstName: "Alex", lastName: "Odermatt").save()
+        Person p3 = new Person(firstName: "Markus", lastName: "Meier").save()
 
         Meetup m1 = new Meetup(location: l1, timeslot: t3, person: p1).save()
         Meetup m2 = new Meetup(location: l3, timeslot: t5, person: p1).save()

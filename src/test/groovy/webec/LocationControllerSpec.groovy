@@ -3,7 +3,7 @@ package webec
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class LocationSpec extends Specification implements DomainUnitTest<Location> {
+class LocationControllerSpec extends Specification implements DomainUnitTest<Location> {
 
     void "Location can be created"() {
         given: "a location"
