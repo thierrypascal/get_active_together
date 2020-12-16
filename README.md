@@ -50,7 +50,7 @@ External contributions:
 Other comments: 
 
 I'm particular proud of:
-
+I made an own template with a delete button for meetups, because otherwise users cannot delete them.
 
 ## Project grading 
 
