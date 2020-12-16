@@ -5,7 +5,7 @@
             <g:sortableColumn property="${p.property}" title="${p.label}" />
         </g:each>
 
-        <g:sortableColumn property="edit" title="edit" />
+        <g:sortableColumn property="delete" title="Löschen"/>
     </tr>
     </thead>
     <tbody>
@@ -19,6 +19,11 @@
                     <td><f:display bean="${bean}" property="${p.property}"  displayStyle="${displayStyle?:'table'}" theme="${theme}"/></td>
                 </g:else>
             </g:each>
+            <td>
+                <g:form resource="${bean}" method="DELETE">
+                    <input class="delete" type="submit" value=" " onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+                </g:form>
+            </td>
         </tr>
     </g:each>
     </tbody>

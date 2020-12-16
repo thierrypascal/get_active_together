@@ -516,7 +516,7 @@ th:hover, tr:hover {
 }
 
 .buttons input,
-.buttons a {
+.buttons a, input.delete {
     background-color: transparent;
     border: 0;
     color: #666666;
@@ -533,7 +533,7 @@ th:hover, tr:hover {
 }
 
 .buttons input:hover, .buttons input:focus,
-.buttons a:hover, .buttons a:focus {
+.buttons a:hover, .buttons a:focus, input.delete:hover {
     background-color: #999999;
     color: #ffffff;
     outline: none;
@@ -550,13 +550,13 @@ th:hover, tr:hover {
     text-decoration: underline;
 }
 
-.buttons .delete, .buttons .edit, .buttons .save, .buttons .list, .buttons .create {
+.buttons .delete, .buttons .edit, .buttons .save, .buttons .list, .buttons .create, input.delete {
     background-position: 0.7em center;
     background-repeat: no-repeat;
     text-indent: 25px;
 }
 
-.buttons .delete {
+.buttons .delete, input.delete {
     background-image: url(../images/skin/database_delete.png);
 }
 
