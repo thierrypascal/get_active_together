@@ -30,14 +30,12 @@
                     <g:link class="dropdown-item" controller="person" action="index">Personen</g:link>
                     <g:link class="dropdown-item" controller="timeslot" action="index">Timeslots</g:link>
                     <g:link class="dropdown-item" controller="location" action="index">Locations</g:link>
-                    <g:link class="dropdown-item" controller="meetup" action="index">Meetups</g:link>
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="drpCreate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Erstellen</a>
                 <div class="dropdown-menu" aria-labelledby="drpCreate">
                     <g:link class="dropdown-item" controller="person" action="create">Personen</g:link>
-                    <g:link class="dropdown-item" controller="timeslot" action="create">Timeslots</g:link>
                     <g:link class="dropdown-item" controller="location" action="create">Locations</g:link>
                     <g:link class="dropdown-item" controller="meetup" action="create">Meetups</g:link>
                 </div>

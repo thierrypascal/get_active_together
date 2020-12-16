@@ -6,7 +6,13 @@ import grails.testing.mixin.integration.Integration
 @Integration
 class PersonSpec extends GebSpec {
 
-    void "create person"() {
+    void "site navigation person"() {
+        when:
+            go '/person/index'
+
+        then:
+            title == "Person Liste"
+
         when:
             go '/person/create'
 
@@ -14,4 +20,5 @@ class PersonSpec extends GebSpec {
             title == "Person anlegen"
 
     }
+
 }
