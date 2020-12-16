@@ -48,7 +48,7 @@
 
 <footer>
     <div>
-        <a href="../meetup/admin">Admin-Page</a>
+        <a href="/meetup/admin">Admin-Page</a>
     </div>
 </footer>
 

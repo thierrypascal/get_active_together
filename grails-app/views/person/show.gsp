@@ -32,7 +32,7 @@
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
-            <f:table collection="${showMyMeetups}" />
+            <f:table collection="${showMyMeetups}" template="meetup_table" myProperty="Template: view/templates/_fields/_meetup_table.gsp" />
 
             <div class="pagination">
                 <g:paginate total="${showMyMeetupsCount ?: 0}" />
