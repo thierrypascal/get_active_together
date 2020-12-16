@@ -38,7 +38,9 @@ confirmed.
 
 How to start the project: (if other than `grailsw run-app`)
 
-How to test the project:  (if other than `grailsw test-app`)
+How to test the project:
+Usually the app should be testable with `grailsw test-app`, but I get "test framework quit unexpectedly" error when running through the IDE.
+Therefor, use `grailsw test-app -unit` and `grailsw test-app -integration` for testing if the same error appears.
 
 Hand-written, static HTML 
 project description:      (if other than `index.html` in project root directory)
