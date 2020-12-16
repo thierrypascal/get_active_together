@@ -39,6 +39,7 @@ body {
     -moz-box-shadow: 0 0 0.3em #424649;
     -webkit-box-shadow: 0 0 0.3em #424649;
     box-shadow: 0 0 0.3em #424649;
+    padding-bottom: 4rem;
 }
 
 a:hover, a:active {
@@ -96,19 +97,6 @@ img {
     right: 0;
     top: 0;
     text-indent: -9999px;
-}
-
-footer{
-    position: fixed;
-    bottom: 0;
-    width: 1000px;
-    background-color: #feb672;
-    color: white;
-    text-align: left;
-    padding-left: 1rem;
-}
-footer a {
-    color: darkgrey;
 }
 
 /* NAVIGATION MENU */
@@ -591,17 +579,4 @@ th:hover, tr:hover {
 a.skip {
     position: absolute;
     left: -9999px;
-}
-
-.grails-logo-container {
-    background: #7c7c7c no-repeat 50% 30%;
-    margin-bottom: 20px;
-    color: white;
-    height:300px;
-    text-align:center;
-}
-
-img.grails-logo {
-    height:340px;
-    margin-top:-10px;
 }

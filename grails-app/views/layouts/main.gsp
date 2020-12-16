@@ -18,24 +18,41 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark navbar-static-top" role="navigation">
     <a class="navbar-brand" href="/#"><strong>GetActiveTogether</strong></a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse" aria-expanded="false" style="height: 0.8px;" id="navbarContent">
-        <ul class="nav navbar-nav ml-auto">
-            <g:pageProperty name="page.nav"/>
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="drpList" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listen</a>
+                <div class="dropdown-menu" aria-labelledby="drpList">
+                    <g:link class="dropdown-item" controller="person" action="index">Personen</g:link>
+                    <g:link class="dropdown-item" controller="timeslot" action="index">Timeslots</g:link>
+                    <g:link class="dropdown-item" controller="location" action="index">Locations</g:link>
+                    <g:link class="dropdown-item" controller="meetup" action="index">Meetups</g:link>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="drpCreate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Erstellen</a>
+                <div class="dropdown-menu" aria-labelledby="drpCreate">
+                    <g:link class="dropdown-item" controller="person" action="create">Personen</g:link>
+                    <g:link class="dropdown-item" controller="timeslot" action="create">Timeslots</g:link>
+                    <g:link class="dropdown-item" controller="location" action="create">Locations</g:link>
+                    <g:link class="dropdown-item" controller="meetup" action="create">Meetups</g:link>
+                </div>
+            </li>
         </ul>
     </div>
 </nav>
 
-<footer class="page-footer font-small blue pt-4">
+<g:layoutBody/>
+
+<footer>
     <div>
         <a href="../meetup/admin">Admin-Page</a>
     </div>
 </footer>
-
-<g:layoutBody/>
 
 <div id="spinner" class="spinner" style="display:none;">
     <g:message code="spinner.alt" default="Loading&hellip;"/>

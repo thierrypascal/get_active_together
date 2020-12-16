@@ -4,10 +4,11 @@
         <g:each in="${domainProperties}" var="p" status="i">
             <g:sortableColumn property="${p.property}" title="${p.label}" />
         </g:each>
+
+        <g:sortableColumn property="edit" title="edit" />
     </tr>
     </thead>
     <tbody>
-    <p>Custom Meetup List</p>
     <g:each in="${collection}" var="bean" status="i">
         <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
             <g:each in="${domainProperties}" var="p" status="j">

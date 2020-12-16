@@ -8,7 +8,7 @@ html, body {
     -webkit-overflow-scrolling: touch;
 }
 
-p, ul, pre, h1, h2, h3, h4, h5, h6, h7, h8 {
+p, ul, pre, h1, h2, h3, h4, h5, h6{
     margin: 1em 0;
 }
 
@@ -16,7 +16,7 @@ p {
     display: block;
 }
 
-h1, h2, h3, h4, h5, h6, h7, h8 {
+h1, h2, h3, h4, h5, h6{
     font-weight: bold;
 }
 
@@ -26,41 +26,39 @@ pre {
     font-size: 14px;
 }
 
+
 /* customizing bootstrap nav bar */
 .navbar {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     padding-right: 110px;
-    background-image: url("../images/header.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
 }
 .navbar .container {
     margin: 10px;
+}
+.navbar .navbar-collapse {
+    padding-left: 2rem;
+    align-self: flex-end;
 }
 .intro {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-.navbar-dark a {
-    color: darkgrey !important;
+.navbar-collapse a {
+    color: #666666 !important;
     font-size: 18px !important;
     text-decoration: none;
 }
-.grails-icon img {
-    width: 40px;
-
-}
-.navbar-dark, .navbar-static-top {
+.navbar-collapse, .navbar-static-top {
     background-color: whitesmoke;
-    border: 0px;
+    border: 0;
 }
 a.navbar-brand {
     color: #feb672 !important;
     font-size: 24px !important;
     margin: 0.5rem;
+    text-decoration: none ;
 }
-.navbar-dark .navbar-nav>.active>a, .navbar-dark .navbar-nav>.active>a:hover, .navbar-dark .navbar-nav>.active>a:focus {
+.navbar-collapse .navbar-nav>.active>a, .navbar-collapse .navbar-nav>.active>a:hover, .navbar-collapse .navbar-nav>.active>a:focus {
     background-color: transparent;
     color: white;
 }
@@ -70,14 +68,15 @@ a.navbar-brand {
 .navbar-nav>li>a:hover {
     background-color: #feb672 !important;
     color: white !important;
+    border-radius: 5px;
 }
 .navbar-nav>li>a {
     color: #c0d3db;
 }
-.navbar-dark .navbar-toggler .icon-bar {
+.navbar-collapse .navbar-toggler .icon-bar {
     background-color: white;
 }
-.navbar-dark .navbar-toggle:hover, .navbar-dark .navbar-toggle:focus {
+.navbar-collapse .navbar-toggle:hover, .navbar-collapse .navbar-toggle:focus {
     background-color: #feb672;
 }
 
@@ -105,212 +104,22 @@ a.navbar-brand {
     }
 }
 
-/* specific to index.html */
-
-@media (max-width: 999px) {
-    #fork-me {
-        display: none;
-    }
-
-    .navbar {
-        padding-right: 0px;
-    }
-}
-
-#fork-me{
+/*footer*/
+footer{
     position: fixed;
-    padding: 0px 50px 0px 50px;
-    top: 40px;
-    right: -60px;
-    background-color: #a60000;
-    color: #ffffff;
-    font-size: 1em;
-    z-index: 100;
-    transform: rotate(+45deg);
-    text-align: center;
-    font-weight: bolder;
-    border: #c14646;
-    border-style: dashed;
-    border-width: 1px;
-}
-
-#fork-me p {
-    margin: 0em 0;
-}
-
-#band {
-    /*grey =#808080*/
-    background: #2559a7  no-repeat 50% 30%;
-    height: 400px;
-}
-
-.svg #band {
-    background-image: url(../img/grails-cupsonly-logo-white.svg);
-}
-
-.no-svg #band {
-    background-image: url(../img/groovy-logo-white.png);
-}
-
-@media (max-width: 1010px) {
-    #band {
-        background-size: 90%;
-        height: 300px;
-    }
-}
-
-@media (max-width: 690px) {
-    #band {
-        background-size: 80%;
-        height: 200px;
-    }
-}
-
-@media (max-width: 475px) {
-    #band {
-        background-size: 70%;
-        height: 100px;
-    }
-}
-
-#they-use-groovy {
-    width: 100%;
-    height: 450px;
-    background-color: #db4800;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-#they-use-groovy .item {
-    text-align: center;
+    bottom: 0;
+    width: 1000px;
+    padding-top: 2rem;
+    background-color: #feb672;
     color: white;
+    text-align: left;
+    padding-left: 1rem;
+}
+footer a {
+    color: darkgrey;
 }
 
-#logos-holder {
-    display: inline-block;
-    padding: 0px;
-    margin: 0px;
-    text-align: center;
-}
-
-#logos-holder .logo {
-    padding: 0px;
-    margin: 0px;
-    display: inline-block;
-    width: 100px;
-    height: 80px;
-    background-size: 95%;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-}
-
-@media (min-width: 330px) {
-    #logos-holder {
-        width: 320px;
-    }
-
-    #they-use-groovy {
-        height: 1130px;
-    }
-}
-
-@media (min-width: 475px) {
-    #logos-holder {
-        width: 420px;
-    }
-
-    #they-use-groovy {
-        height: 900px;
-    }
-}
-
-@media (min-width: 690px) {
-    #logos-holder {
-        width: 630px;
-    }
-
-    #they-use-groovy {
-        height: 600px;
-    }
-}
-
-@media (min-width: 1010px) {
-    #logos-holder {
-        width: 940px;
-    }
-
-    #they-use-groovy {
-        height: 450px;
-    }
-}
-
-.centered {
-    text-align: center;
-}
-
-.event-img {
-    margin: -20px -20px 20px -20px;
-    background-repeat: no-repeat;
-    background-position: 50% top;
-    height: 180px;
-}
-
-.event-logo {
-    height: 180px;
-    float: right;
-}
-
-@media (max-width: 1010px) {
-    .event-logo {
-        height: 100px;
-    }
-}
-
-@media (max-width: 690px) {
-    .event-logo {
-        height: 60px;
-    }
-}
-
-@media (max-width: 475px) {
-    .event-logo {
-        display: none;
-    }
-}
-
-article .content time {
-    font-weight: bold;
-}
-
-.doc-embed {
-    border: 0;
-    width: 100%;
-    min-height: 100%;
-}
-
-.download-table {
-    width: 100%;
-    text-align: center;
-}
-
-.download-table td {
-    width: 20%;
-}
-
-#mc-embedded-subscribe {
-    width: 200px;
-    font-weight: bold;
-}
-
-#mc-embedded-subscribe:hover {
-    background-color: #F2F2F2;
-    font-weight: bold;
-}
-
-#footer .colset-3-footer .col-1 h1, #footer .colset-3-footer .col-2 h1, #footer .colset-3-footer .col-3 h1 {
-    font-size: 15px !important;
-}
-
+/*others*/
 .anchor-link:before {
     content: ' # ';
     color: lightgray;
@@ -322,48 +131,6 @@ article .content time {
 
 code, kbd, pre, samp {
     font-family: "Source Code Pro", "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-}
-
-#contribute-btn {
-    position: absolute;
-    right: 15px;
-}
-
-@media (max-width: 767px) {
-    #contribute-btn {
-        width: 100%;
-        position: relative;
-        margin-top: 30px;
-        right: 0px;
-    }
-
-    #contribute-btn button {
-        width: 100%;
-        right: 15px;
-    }
-}
-
-@media (min-width: 1200px) {
-    #contribute-btn {
-        top: 25px;
-        right: 15px;
-    }
-}
-
-#big-download-button {
-    float: right;
-    font-size: 30px;
-    padding: 15px;
-    margin: 10px 0px 10px 20px;
-    border: 2px solid #db4800;
-    border-radius: 6px;
-    background-color: #db4800;
-    color: white;
-}
-
-#big-download-button:hover {
-    background-color: #e6e6e6;
-    color: #db4800;
 }
 
 .colset-3-footer .col-1, .colset-3-footer .col-2, .colset-3-footer .col-3 {
@@ -449,94 +216,11 @@ h6 {
     color: #2559a7;
 }
 
-h7 {
-    font-weight: bold;
-    color: #245f78;
-}
-
-h8 {
-    color: #245f78;
-}
-
-#footer {
-    background: #f2f2f2;
-    text-align: center;
-    font-size: 14px;
-    padding: 20px 0 30px;
-    margin-top: 30px;
-    color: #AAA
-}
-
-#footer .col-right {
-    float: right;
-    width: 300px;
-    text-align: right;
-    padding-top: 10px
-}
-
-#footer .colset-3-footer {
-    color: #222;
-    font-size: 14px
-}
-
-#footer .colset-3-footer:before, #footer .colset-3-footer:after {
-    content: " ";
-    display: table
-}
-
-#footer .colset-3-footer:after {
-    clear: both
-}
-
-#footer .colset-3-footer .col-1, #footer .colset-3-footer .col-2, #footer .colset-3-footer .col-3 {
-    width: 18%;
-    padding: 20px 0 30px;
-    padding-right: 3%;
-    float: left;
-    text-align: left
-}
-
-#footer .colset-3-footer .col-3 {
-    width: 24%;
-}
-
-#footer .colset-3-footer .col-1 h1, #footer .colset-3-footer .col-2 h1, #footer .colset-3-footer .col-3 h1 {
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 30px;
-    margin: 0
-}
-
-#footer .colset-3-footer .col-1 ul, #footer .colset-3-footer .col-2 ul, #footer .colset-3-footer .col-3 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0
-}
-
-#footer .colset-3-footer .col-1 ul li, #footer .colset-3-footer .col-2 ul li, #footer .colset-3-footer .col-3 ul li {
-    margin: 0;
-    padding: 0
-}
-
-#footer .colset-3-footer .col-1 ul li a, #footer .colset-3-footer .col-2 ul li a, #footer .colset-3-footer .col-3 ul li a {
-    color: #343437;
-    text-decoration: none
-}
-
-#footer .colset-3-footer .col-1 ul li a:hover, #footer .colset-3-footer .col-2 ul li a:hover, #footer .colset-3-footer .col-3 ul li a:hover {
-    text-decoration: underline
-}
-
-#footer .second a {
-    color: #db4800
-}
-
 .row {
     position: relative;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 5%;
-    padding-bottom: 4rem;
+    padding: 0 5% 4rem;
 }
 
 .row:before, .row:after {
@@ -594,14 +278,11 @@ h8 {
 #content hr.row, #content hr.divider {
     border: 0 none;
     border-top: 1px solid #EEE;
-    margin: 0 5%;
-    margin-top: 40px
+    margin: 40px 5% 0;
 }
 
 #content hr.divider {
-    margin: 0;
-    margin-top: 40px;
-    margin-bottom: 30px
+    margin: 40px 0 30px;
 }
 
 #content .colset-2-its:before, #content .colset-2-its:after {
@@ -656,7 +337,6 @@ h8 {
     display: block;
     width: 80px;
     height: 80px;
-    background-image: url(../images/icons-colset-2-its.png);
     float: left;
     margin-top: 12px;
     margin-right: 15px
@@ -712,8 +392,7 @@ h8 {
 }
 
 #content .colset-3-article div.content {
-    padding: 20px;
-    padding-bottom: 5px
+    padding: 20px 20px 5px;
 }
 
 #content .colset-3-article article {
@@ -803,8 +482,7 @@ h8 {
 }
 
 ul.nav-sidebar {
-    margin: 0;
-    margin-top: 20px;
+    margin: 20px 0 0;
     padding: 5px 0;
     border: 1px solid #EEE;
     list-style-type: none
@@ -1053,7 +731,7 @@ html, body, .st-container, .st-pusher, .st-content {
     float: left;
     margin-right: 40px;
     margin-top: 1em;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     width: 300px;
     height: auto;
 }

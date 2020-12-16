@@ -16,7 +16,7 @@ class Timeslot {
 
     String toString() {
         if (this.date != null){
-            "$timeslot, ${date.year + 1900}-${date.month + 1}-${date.date}"     //to not show the nulled time
+            "$timeslot, ${date.year + 1900}-${date.month + 1}-${date.date}"     //to not show time
         }else{
             "$timeslot, $date"
         }
