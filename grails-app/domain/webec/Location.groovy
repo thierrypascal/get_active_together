@@ -19,8 +19,8 @@ class Location {
 
     static constraints = {
         title nullable: false
-        latitude nullable: false
-        longitude nullable: false
+        latitude nullable: false, min: -90.0.doubleValue(), max: 90.0.doubleValue()
+        longitude nullable: false, min: -90.0.doubleValue(), max: 90.0.doubleValue()
         activity nullable: false, inList: ACTIVITY
     }
 }

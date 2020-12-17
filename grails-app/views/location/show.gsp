@@ -56,15 +56,16 @@
 
         function initMap() {
             const myLatLng = {
-                lat: 47.5,
-                lng: 6.5
+                lat: ${this.location.latitude},
+                lng: ${this.location.longitude}
             };
             const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 18,
+                zoom: 15,
                 center: myLatLng,
                 fullscreenControl: false,
                 zoomControl: false,
-                streetViewControl: false
+                streetViewControl: false,
+                mapTypeId: 'hybrid'
             });
             new google.maps.Marker({
                 position: myLatLng,

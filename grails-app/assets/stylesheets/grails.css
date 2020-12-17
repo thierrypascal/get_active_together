@@ -193,7 +193,7 @@ footer a {
 
 /*show location, map*/
 .row.loc {
-    padding-bottom: 0;
+    padding-bottom: 5px;
 }
 #map {
     height: 100%;
