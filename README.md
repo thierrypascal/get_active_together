@@ -48,9 +48,10 @@ project description:      (if other than `index.html` in project root directory)
 External contributions:
 
 Other comments: 
+Username and password for Admin-Section: "admin". 
 
 I'm particular proud of:
-I made an own template with a delete button for meetups, because otherwise users cannot delete them.
+I made an own template with a delete button for meetups, because otherwise users couldn't delete them.
 
 ## Project grading 
 
