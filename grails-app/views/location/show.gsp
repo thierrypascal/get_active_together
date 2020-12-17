@@ -4,6 +4,11 @@
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'location.label', default: 'Location')}" />
         <title><g:message code="default.show.label" args="[entityName]" /></title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNxQFOgOQArlgSgQYPnlDEGqWhEI3CUgA&callback=initMap&libraries=&v=weekly"
+                defer
+        ></script>
     </head>
     <body>
         <a href="#show-location" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -18,7 +23,14 @@
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>
-            <f:display bean="location" />
+            <div class="row loc">
+                <div class="col-8">
+                    <f:display bean="location" />
+                </div>
+                <div class="col-4">
+                    <div id="map"></div>
+                </div>
+            </div>
             <g:form resource="${this.location}" method="DELETE">
                 <fieldset class="buttons">
                     <g:link class="edit" action="edit" resource="${this.location}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
@@ -38,5 +50,28 @@
                 <g:paginate total="${showAllPersonCount ?: 0}" />
             </div>
         </div>
+
+    <script>
+        "use strict";
+
+        function initMap() {
+            const myLatLng = {
+                lat: 47.5,
+                lng: 6.5
+            };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 18,
+                center: myLatLng,
+                fullscreenControl: false,
+                zoomControl: false,
+                streetViewControl: false
+            });
+            new google.maps.Marker({
+                position: myLatLng,
+                map,
+                title: "Hello World!"
+            });
+        }
+    </script>
     </body>
 </html>

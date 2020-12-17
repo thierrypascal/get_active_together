@@ -191,6 +191,15 @@ footer a {
     font-weight: bold;
 }
 
+/*show location, map*/
+.row.loc {
+    padding-bottom: 0;
+}
+#map {
+    height: 100%;
+}
+
+
 /*others*/
 .anchor-link:before {
     content: ' # ';

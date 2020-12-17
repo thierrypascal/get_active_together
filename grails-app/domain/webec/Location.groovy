@@ -3,7 +3,8 @@ package webec
 
 class Location {
     String title
-    String coordinates
+    Double latitude
+    Double longitude
     String activity
 
     public static final String act1  = "Jogging"
@@ -14,11 +15,12 @@ class Location {
 
     public static final List<String> ACTIVITY = [act1, act2, act3, act4, act5]
 
-    String toString() {"$title, $activity, ($coordinates)"}
+    String toString() {"$title, $activity, ($latitude, $longitude)"}
 
     static constraints = {
         title nullable: false
-        coordinates nullable: false
+        latitude nullable: false
+        longitude nullable: false
         activity nullable: false, inList: ACTIVITY
     }
 }
