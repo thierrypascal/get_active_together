@@ -1,5 +1,7 @@
 package webec
 
+import grails.plugin.springsecurity.annotation.Secured
+
 import static org.springframework.http.HttpStatus.NO_CONTENT
 
 class MeetupController {
@@ -8,15 +10,7 @@ class MeetupController {
 
     MeetupService meetupService
 
-    def test(){
-        Person person = Person.findByFirstName("Thierry")
-        List<Meetup> meetups = Meetup.findAllByPerson(person)
-
-        def result = meetups.location
-
-        render result
-    }
-
+    @Secured(SecRole.ADMIN)
     def admin(){}
 
     def delete(Long id) {
@@ -30,7 +24,7 @@ class MeetupController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'meetup.label', default: 'Meetup'), id])
-                redirect action:"index", method:"GET"
+                redirect controller:"person", action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }
         }

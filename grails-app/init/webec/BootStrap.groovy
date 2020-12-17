@@ -1,21 +1,40 @@
 package webec
 
+import grails.util.Environment
 import org.codehaus.groovy.runtime.DateGroovyMethods
 
 class BootStrap {
 
     def init = { servletContext ->
+        //SecUser
+        SecRole adminRole = save(SecRole.findOrCreateWhere(authority: SecRole.ADMIN))
+
+        if (Environment.current != Environment.DEVELOPMENT) { // guard clause
+            return;
+        }
+
+        SecUser testUser  = save(new SecUser(username: 'admin',      password: 'admin'))
+
+        testUser.withTransaction { tx ->
+            SecUserSecRole.create(testUser, adminRole, true)
+        }
+
+        // plausibility check
+        assert SecRole.count()          == 1
+        assert SecUser.count()          == 1
+        assert SecUserSecRole.count()   == 1
+
 
         //all locations
-        Location l1 = new Location(title: "Grillstelle Güggelchrüz",        coordinates: "47.519046, 7.538752",     activity: Location.act1).save()
-        Location l2 = new Location(title: "Grillstelle Güggelchrüz",        coordinates: "47.519046, 7.538752",     activity: Location.act2).save()
-        Location l3 = new Location(title: "Grillstelle Güggelchrüz",        coordinates: "47.519046, 7.538752",     activity: Location.act3).save()
-        Location l4 = new Location(title: "Grillstelle Güggelchrüz",        coordinates: "47.519046, 7.538752",     activity: Location.act5).save()
-        Location l5 = new Location(title: "Hüslimatt",                      coordinates: "47.510326, 7.558631",     activity: Location.act1).save()
-        Location l6 = new Location(title: "Hüslimatt",                      coordinates: "47.510326, 7.558631",     activity: Location.act2).save()
-        Location l7 = new Location(title: "Hüslimatt",                      coordinates: "47.510326, 7.558631",     activity: Location.act3).save()
-        Location l8 = new Location(title: "Hüslimatt",                      coordinates: "47.510326, 7.558631",     activity: Location.act4).save()
-        Location l9 = new Location(title: "Bim Wyss",                       coordinates: "47.511711, 7.555675",     activity: Location.act2).save()
+        Location l1  = new Location(title: "Grillstelle Güggelchrüz",       coordinates: "47.519046, 7.538752",     activity: Location.act1).save()
+        Location l2  = new Location(title: "Grillstelle Güggelchrüz",       coordinates: "47.519046, 7.538752",     activity: Location.act2).save()
+        Location l3  = new Location(title: "Grillstelle Güggelchrüz",       coordinates: "47.519046, 7.538752",     activity: Location.act3).save()
+        Location l4  = new Location(title: "Grillstelle Güggelchrüz",       coordinates: "47.519046, 7.538752",     activity: Location.act5).save()
+        Location l5  = new Location(title: "Hüslimatt",                     coordinates: "47.510326, 7.558631",     activity: Location.act1).save()
+        Location l6  = new Location(title: "Hüslimatt",                     coordinates: "47.510326, 7.558631",     activity: Location.act2).save()
+        Location l7  = new Location(title: "Hüslimatt",                     coordinates: "47.510326, 7.558631",     activity: Location.act3).save()
+        Location l8  = new Location(title: "Hüslimatt",                     coordinates: "47.510326, 7.558631",     activity: Location.act4).save()
+        Location l9  = new Location(title: "Bim Wyss",                      coordinates: "47.511711, 7.555675",     activity: Location.act2).save()
         Location l10 = new Location(title: "Schiessstand Therwil",          coordinates: "47.506746, 7.562740",     activity: Location.act1).save()
         Location l11 = new Location(title: "Schiessstand Therwil",          coordinates: "47.506746, 7.562740",     activity: Location.act2).save()
         Location l12 = new Location(title: "Schiessstand Therwil",          coordinates: "47.506746, 7.562740",     activity: Location.act3).save()
@@ -63,16 +82,15 @@ class BootStrap {
             sunday = monday + 6
         }
 
-        Timeslot t1 = new Timeslot(date: monday,        timeslot: Timeslot.AM1).save()
-        Timeslot t2 = new Timeslot(date: monday,        timeslot: Timeslot.AM2).save()
-        Timeslot t3 = new Timeslot(date: monday,        timeslot: Timeslot.PM1).save()
-        Timeslot t4 = new Timeslot(date: monday,        timeslot: Timeslot.PM2).save()
-        Timeslot t5 = new Timeslot(date: monday,        timeslot: Timeslot.PM3).save()
-
-        Timeslot t6 = new Timeslot(date: tuesday,       timeslot: Timeslot.AM1).save()
-        Timeslot t7 = new Timeslot(date: tuesday,       timeslot: Timeslot.AM2).save()
-        Timeslot t8 = new Timeslot(date: tuesday,       timeslot: Timeslot.PM1).save()
-        Timeslot t9 = new Timeslot(date: tuesday,       timeslot: Timeslot.PM2).save()
+        Timeslot t1  = new Timeslot(date: monday,       timeslot: Timeslot.AM1).save()
+        Timeslot t2  = new Timeslot(date: monday,       timeslot: Timeslot.AM2).save()
+        Timeslot t3  = new Timeslot(date: monday,       timeslot: Timeslot.PM1).save()
+        Timeslot t4  = new Timeslot(date: monday,       timeslot: Timeslot.PM2).save()
+        Timeslot t5  = new Timeslot(date: monday,       timeslot: Timeslot.PM3).save()
+        Timeslot t6  = new Timeslot(date: tuesday,      timeslot: Timeslot.AM1).save()
+        Timeslot t7  = new Timeslot(date: tuesday,      timeslot: Timeslot.AM2).save()
+        Timeslot t8  = new Timeslot(date: tuesday,      timeslot: Timeslot.PM1).save()
+        Timeslot t9  = new Timeslot(date: tuesday,      timeslot: Timeslot.PM2).save()
         Timeslot t10 = new Timeslot(date: tuesday,      timeslot: Timeslot.PM3).save()
 
         Timeslot t11 = new Timeslot(date: wednesday,    timeslot: Timeslot.AM1).save()
@@ -117,5 +135,12 @@ class BootStrap {
 
     }
     def destroy = {
+    }
+
+    static save(domainObject) {
+        domainObject.withTransaction { tx ->
+            domainObject.save(failOnError: true, flush: true)
+        }
+        return domainObject
     }
 }
