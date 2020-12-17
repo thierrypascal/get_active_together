@@ -119,6 +119,78 @@ footer a {
     color: darkgrey;
 }
 
+/*login form*/
+#login {
+    width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 77px 55px 33px;
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+}
+.ltitle {
+    display: block;
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+    font-weight: bolder;
+}
+.limg img{
+    max-width: 280px;
+    margin-bottom: 2rem;
+}
+.text_ {
+    margin-bottom: 2rem;
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid #adadad;
+}
+.focus-linput {
+    color: #adadad;
+    pointer-events: none;
+}
+.linput {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: 0 0;
+    padding: 0 5px;
+    border: none;
+}
+.btn-show-pass {
+    font-size: 15px;
+    color: #999;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding-right: 5px;
+    cursor: pointer;
+    transition: all .4s;
+}
+#remember_me_holder {
+    color: #5a6268;
+}
+#loginBtn {
+    margin-top: 2rem;
+    text-align: center;
+}
+.loginBtn {
+    width: 150px;
+    border-radius: 5px;
+    border-color: #feb672;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 /*others*/
 .anchor-link:before {
     content: ' # ';
