@@ -3,7 +3,7 @@
     <head>
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'location.label', default: 'Location')}" />
-        <title><g:message code="default.list.label" args="[entityName]" /></title>
+        <title>Admin-Page</title>
     </head>
     <body>
         <div class="container intro">

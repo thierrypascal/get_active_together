@@ -15,11 +15,11 @@
             <span class="limg">
                 <g:img dir="images" file="logo.png"/>
             </span>
-            <div type="text" class="text_" autocapitalize="none">
+            <div class="text_" autocapitalize="none">
                 <label class="focus-linput" for="username"><g:message code='springSecurity.login.username.label'/>:</label>
                 <input class="linput" type="text" name="${usernameParameter ?: 'username'}" id="username">
             </div>
-            <div type="password" class="text_" name="password">
+            <div class="text_">
                 <span class="btn-show-pass">
                     <i id="passwordToggler" title="toggle password display" onclick="passwordDisplayToggle()">👁</i>
                 </span>

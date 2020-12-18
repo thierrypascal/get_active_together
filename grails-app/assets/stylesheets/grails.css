@@ -189,6 +189,12 @@ footer a {
     border-color: #feb672;
     font-size: 16px;
     font-weight: bold;
+    background-color: #feb672;
+    color: white;
+}
+.loginBtn:focus {
+    background-color: #feb67280;
+    color: #0000004d;
 }
 
 /*show location, map*/
