@@ -53,6 +53,7 @@ Username and password for Admin-Section: "admin".
 I'm particular proud of:
 - I made an own template with a delete button for meetups, because otherwise users couldn't delete them.
 - I made a custom login form so that it looks nicer and fits better to the rest of the app
+- Every location shows it's coordinates on a small map
 
 ## Project grading 
 
