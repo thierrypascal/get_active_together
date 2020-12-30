@@ -40,7 +40,7 @@ How to start the project: (if other than `grailsw run-app`)
 
 How to test the project:
 Usually the app should be testable with `grailsw test-app`, but I get "test framework quit unexpectedly" error when running through the IDE.
-Therefor, use `grailsw test-app -unit` and `grailsw test-app -integration` for testing if the same error appears.
+Therefore, use `grailsw test-app -unit` and `grailsw test-app -integration` for testing if the same error appears.
 
 Hand-written, static HTML 
 project description:      (if other than `index.html` in project root directory)
@@ -53,9 +53,32 @@ Username and password for Admin-Section: "admin".
 I'm particular proud of:
 - I made an own template with a delete button for meetups, because otherwise users couldn't delete them.
 - I made a custom login form so that it looks nicer and fits better to the rest of the app
-- Every location shows it's coordinates on a small map
+- Every location shows its coordinates on a small map
 
 ## Project grading 
 
-<to be filled by lecturer>
+index.html given and valid.
+
+The application works.
+
+Functionality is an information system with CRUD operations for 4 domain classes in 3 many-to-one
+relations plus security, specialized views and controllers, declarative validation, data setup, and maps integration.
+
+Git log is good.
+Unit and integrations tests provided, incl. security.
+HTML validity:  Element "a" is missing one or more of the following attributes: href, role.
+(You are actually misusing the anchor element.)
+Some comments in the tests, otherwise missing.
+
+Since we hit the ceiling anyway, there are no extra points like for calling external services.
+I very much like your work on the UI, though, and you make good use of the framework features.
+
+Congratulations!
+You created a fully functional, distributed, interactive, multi-user, security-enabled, database-backed, 
+unit- and integration-tested web application
+from scratch on your own in a rather tight time frame showing solid knowledge of WebMVC and engineering practices.
+Many professional developers in the industry would have estimated more time for this feature set.
+You can use this project as a work proof when applying for a job.
+
+Grade: 6.0
 
