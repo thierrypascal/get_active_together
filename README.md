@@ -2,8 +2,6 @@
 
 ## Commit Proposal
 
-Matriculation Number: 19-487-388
-
 Project idea short description:
 
 #####Title: GetActiveTogether
